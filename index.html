@@ -3,483 +3,357 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>
       Ajen Group - Real Estate · Construction · Hospitality · Accommodation
     </title>
+
     <link rel="stylesheet" href="styles.css" />
+
     <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
->
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
   </head>
+
   <body>
-    <!-- ===================== UTILITY STRIP ===================== -->
-    <div class="utility-strip">
-      <div class="wrap">
-        <div class="socials">
-          <a href="#" aria-label="Facebook">
-  <i class="fa-brands fa-facebook-f"></i>
-</a>
 
-<a href="#" class="instagram" aria-label="Instagram">
-  <i class="fa-brands fa-instagram"></i>
-</a>
+    <!-- ===================== NAV COMPONENT ===================== -->
+    <div id="site-nav"></div>
 
-<a href="#" aria-label="LinkedIn">
-  <i class="fa-brands fa-linkedin-in"></i>
-</a>
+
+    <main>
+
+      <!-- ===================== HERO ===================== -->
+      <section class="hero" id="top">
+
+        <div class="wrap hero-content">
+
+          <h1>
+            Building Exceptional Assets<br />
+            Creating Enduring Value
+          </h1>
+
+          <p class="hero-sub">
+            A growing business group across Real Estate, Construction,
+            Hospitality, and Premium Accommodation, built on experience, quality,
+            and a long-term vision for growth
+          </p>
+
         </div>
-        <a href="mailto:info@ajengroup.com">info@ajengroup.com</a>
-      </div>
-    </div>
 
-    <header class="main-nav">
-  <div class="wrap">
 
-    <a href="#top" class="brand" aria-label="Ajen Group">
-  <img src="assets/logo.png" alt="Ajen Group">
-</a>
+        <div class="hero-gallery-wrap">
 
-    <nav class="links">
-      <a href="#about">About Us</a>
+          <div class="hero-gallery" id="heroGallery"></div>
 
-      <div class="has-drop">
-        <button>
-          Businesses
-          <span class="caret"></span>
-        </button>
+          <div class="hero-gallery-bottom">
 
-        <div class="dropdown">
-          <a href="#accommodation">Hospitality</a>
-          <a href="#realestate">Real Estate</a>
-        </div>
-      </div>
-
-      <a href="#vision">Vision</a>
-    </nav>
-
-    <a href="#contact" class="nav-cta">Contact Us</a>
-
-    <button
-      class="burger"
-      aria-expanded="false"
-      aria-label="Open navigation"
-    >
-      Menu
-    </button>
-
-  </div>
-</header>
-
-    <!-- ===================== HERO ===================== -->
-    <section class="hero" id="top">
-      <div class="wrap hero-content">
-        <h1>
-          Building Exceptional Assets<br />
-          Creating Enduring Value
-        </h1>
-        <p class="hero-sub">
-          A growing business group across Real Estate, Construction, Hospitality, and Premium Accommodation, built on experience, quality, and a long-term vision for growth
-        </p>
-      </div>
-      <div class="hero-gallery-wrap">
-        <div class="hero-gallery" id="heroGallery"></div>
-        <div class="hero-gallery-bottom">
-          <div class="hero-gallery-progress">
-            <span id="heroGalleryProgress"></span>
-          </div>
-          <div class="hero-gallery-hint">Drag to explore</div>
-        </div>
-      </div>
-      <p class="hero-sub hero-sub-bottom">
-  We create quality spaces and thoughtful hospitality experiences, combining
-  comfort, professional service, accessibility, and lasting value as we grow
-  across India.
-</p>
-      
-      <div class="wrap hero-bottom">
-        
-        <div class="hero-ctas">
-          <a href="#accommodation" class="btn-solid">
-            Explore our businesses
-          </a>
-          <a href="#projects" class="btn-line"> View projects </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== ABOUT ===================== -->
-    <section class="light section-pad" id="about">
-      <div class="wrap">
-        <div class="about-grid">
-          <div class="about-copy reveal">
-            <h3>Who we are?</h3>
-
-            <p>
-              Ajen Group is an emerging business group with a growing presence
-              across real estate, construction, hospitality and premium
-              accommodation. Built on experience and a long-term vision, we
-              focus on creating quality spaces, delivering thoughtful
-              experiences and building lasting value.
-            </p>
-
-            <a href="#realestate" class="know-more">
-              Know more <span aria-hidden="true">→</span>
-            </a>
-          </div>
-
-          <div class="about-stats reveal">
-            <div class="stat-grid">
-              <div class="stat">
-                <div class="num" data-target="8" data-suffix="+">8+</div>
-                <div class="label">Projects delivered</div>
-              </div>
-
-              <div class="stat">
-                <div class="num" data-target="1000" data-suffix="+">1000+</div>
-                <div class="label">Happy customers</div>
-              </div>
-
-              <div class="stat">
-                <div class="num" data-target="1000" data-suffix="+">1000+</div>
-                <div class="label">Clients served</div>
-              </div>
-
-              <div class="stat">
-                <div class="num" data-target="5" data-suffix="+">5+</div>
-                <div class="label">Premium accommodations</div>
-              </div>
+            <div class="hero-gallery-progress">
+              <span id="heroGalleryProgress"></span>
             </div>
 
-            <div class="stat-note">
-              Selected figures shown for presentation and subject to final
-              confirmation.
+            <div class="hero-gallery-hint">
+              Drag to explore
             </div>
+
           </div>
-        </div>
-      </div>
-    </section>
 
-<!-- ===================== HOSPITALITY ===================== -->
-<section class="dark section-pad" id="accommodation">
-  <div class="wrap">
-
-    <!-- Existing Hospitality content — DO NOT CHANGE -->
-    <div class="section-head head-split reveal">
-      <div class="section-head-main">
-        <div class="eyebrow">Hospitality</div>
-        <h2>Stay somewhere thoughtfully made</h2>
-      </div>
-
-      <p class="lede">
-        A curated collection of premium stays across Bhubaneswar, designed
-        around comfort, privacy and a considered guest experience.
-      </p>
-    </div>
-
-    <div class="prop-grid" id="propGrid"></div>
-
-
-    <!-- ===================== COMING NEXT ===================== -->
-    <div class="hospitality-coming-next">
-
-      <div class="coming-next-head reveal">
-        <div class="eyebrow">Coming next</div>
-
-        <div class="coming-next-main">
-          <h3>A new stay is taking shape</h3>
         </div>
 
-        <p class="lede">
-          Our hospitality portfolio is continuing to grow with new stays
-          planned around comfort, privacy and the way people travel today.
+
+        <p class="hero-sub hero-sub-bottom">
+          We create quality spaces and thoughtful hospitality experiences,
+          combining comfort, professional service, accessibility, and lasting
+          value as we grow across India.
         </p>
-      </div>
 
 
-      <div class="upcoming-showcase">
+        <div class="wrap hero-bottom">
 
-        <div class="upcoming-grid" id="upcomingGrid"></div>
+          <div class="hero-ctas">
 
-        <!-- Hidden automatically when only one upcoming property exists -->
-        <div
-          class="upcoming-controls"
-          id="upcomingControls"
-          aria-label="Upcoming property navigation"
-        >
-          <button
-            type="button"
-            class="upcoming-prev"
-            aria-label="Previous upcoming property"
-          >
-            ←
-          </button>
-
-          <div class="upcoming-count" aria-live="polite">
-            <span id="upcomingCurrent">01</span>
-            <span>/</span>
-            <span id="upcomingTotal">01</span>
-          </div>
-
-          <button
-            type="button"
-            class="upcoming-next"
-            aria-label="Next upcoming property"
-          >
-            →
-          </button>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-   <!-- ===================== REAL ESTATE ===================== -->
-<section class="light section-pad real-estate-section" id="realestate">
-  <div class="wrap">
-
-    <!-- Intro -->
-    <div class="real-estate-top reveal">
-
-
-      <!-- Main content — LEFT -->
-      <div class="real-estate-copy">
-        <div class="eyebrow">Our partners</div>
-
-        <h2>Building with established partners</h2>
-
-        
-      </div>
-
-      <!-- Partnership block — RIGHT -->
-      <div class="real-estate-partner">
-        <div class="partner-label">In collaboration with</div>
-
-        <div class="partner-name">
-          <strong>[Partner corporation name]</strong>
-        </div>
-
-        <div class="partner-note">
-          Replace this with the client-approved partnership wording before publishing.
-        </div>
-      </div>
-      <div class="real-estate-description">
-          <p>
-            Our experience in real estate is supported by our involvement in
-            projects developed in collaboration with established industry
-            partners.
-          </p>
-
-          <p>
-            Ajen Group has been involved in and contributed to selected real
-            estate projects undertaken in collaboration with our development
-            partners, drawing on established industry experience and expertise.
-          </p>
-        </div>
-
-    </div>
-
-
-    <!-- Selected projects -->
-    <div class="real-estate-projects">
-
-      <div class="projects-heading reveal">
-        <div class="eyebrow">Selected projects</div>
-      </div>
-
-      <div class="proj-scroller" id="projGrid"></div>
-
-      <div class="view-all-row">
-        <a href="#realestate" class="know-more">
-              View all projects <span aria-hidden="true">→</span>
+            <a href="#accommodation" class="btn-solid">
+              Explore our businesses
             </a>
-      </div>
 
-    </div>
+            <a href="#projects" class="btn-line">
+              View projects
+            </a>
 
-  </div>
-</section>
-
-    <!-- ===================== UPCOMING PROJECTS ===================== -->
-    <section class="dark section-pad">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <div class="eyebrow">Upcoming projects</div>
-          <div>
-            <h2>Projects in development.</h2>
           </div>
-          <p class="lede">
-            A look at developments currently underway and the opportunities
-            taking shape for the future.
-          </p>
+
         </div>
 
-        <div class="upcoming-proj-list" id="upcomingProjList"></div>
-      </div>
-    </section>
-
-    <!-- ===================== VISION ===================== -->
-<section class="vision section-pad" id="vision">
-  <div class="wrap">
-
-    <div class="vision-box reveal">
-
-      <h2>
-        Our vision: Building for the long term
-      </h2>
-
-      <p class="vision-lede">
-        Our long-term vision is to build a nationally recognised hospitality
-        and real estate group, expanding across India while maintaining the
-        quality, value and distinctive approach that define Ajen Group.
-      </p>
-
-      <div class="vision-points">
-        <div class="vpoint">
-          <span class="vlabel">Expand</span>
-          <span class="vdesc">Across India, beginning from Bhubaneswar</span>
-        </div>
-
-        <div class="vpoint">
-          <span class="vlabel">Build</span>
-          <span class="vdesc">Enduring assets across real estate &amp; hospitality</span>
-        </div>
-
-        <div class="vpoint">
-          <span class="vlabel">Create</span>
-          <span class="vdesc">Better experiences for every guest and client</span>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-    <!-- ===================== CONTACT ===================== -->
-<section class="dark-2 section-pad" id="contact">
-  <div class="wrap">
-
-    <div class="contact-grid">
-
-      <!-- LEFT -->
-      <div class="contact-left reveal">
-
-        <h2>Start a conversation</h2>
-
-        <p>
-          For partnerships, project enquiries, accommodation and business
-          opportunities, connect with our team.
-        </p>
-
-        <div class="contact-detail">
-          <a href="mailto:info@ajengroup.com">info@ajengroup.com</a>
-          <span style="color:var(--navy-text-dim);">
-            Bhubaneswar, Odisha
-          </span>
-        </div>
-
-      </div>
+      </section>
 
 
-      <!-- MIDDLE -->
-      <div class="contact-middle reveal">
+      <!-- ===================== ABOUT ===================== -->
+      <section class="light section-pad" id="about">
 
-        <div class="field">
-          <label>Name</label>
+        <div class="wrap">
 
-          <input
-            type="text"
-            placeholder="Your full name"
-          >
-        </div>
+          <div class="about-grid">
 
-        <div class="field">
-          <label>Message</label>
+            <div class="about-copy reveal">
 
-          <textarea
-            placeholder="Tell us about your enquiry"
-          ></textarea>
-        </div>
+              <h3>Who we are?</h3>
 
-        <button
-          type="button"
-          class="btn-solid contact-submit"
-        >
-          Send message
-        </button>
+              <p>
+                Ajen Group is an emerging business group with a growing presence
+                across real estate, construction, hospitality and premium
+                accommodation. Built on experience and a long-term vision, we
+                focus on creating quality spaces, delivering thoughtful
+                experiences and building lasting value.
+              </p>
 
-      </div>
+              <a href="#realestate" class="know-more">
+                Know more
+                <span aria-hidden="true">→</span>
+              </a>
+
+            </div>
 
 
-      <!-- RIGHT -->
-      <div class="contact-right reveal">
+            <div class="about-stats reveal">
 
-        <div class="field">
-          <label>Email</label>
+              <div class="stat-grid">
 
-          <input
-            type="email"
-            placeholder="you@email.com"
-          >
-        </div>
+                <div class="stat">
 
-      </div>
+                  <div
+                    class="num"
+                    data-target="8"
+                    data-suffix="+"
+                  >
+                    8+
+                  </div>
 
-    </div>
+                  <div class="label">
+                    Projects delivered
+                  </div>
 
-  </div>
-</section>
+                </div>
 
-    <!-- ===================== FOOTER ===================== -->
-    <footer>
-      <div class="wrap">
-        <div class="footer-top">
-          <div class="footer-brand">
-            <a href="#top" class="brand" aria-label="Ajen Group">
-  <img src="assets/logo.png" alt="Ajen Group">
-</a>
 
-            <p>
-              Building exceptional assets. Creating enduring value. A growing
-              business group based in Bhubaneswar, Odisha.
-            </p>
+                <div class="stat">
+
+                  <div
+                    class="num"
+                    data-target="1000"
+                    data-suffix="+"
+                  >
+                    1000+
+                  </div>
+
+                  <div class="label">
+                    Happy customers
+                  </div>
+
+                </div>
+
+
+                <div class="stat">
+
+                  <div
+                    class="num"
+                    data-target="1000"
+                    data-suffix="+"
+                  >
+                    1000+
+                  </div>
+
+                  <div class="label">
+                    Clients served
+                  </div>
+
+                </div>
+
+
+                <div class="stat">
+
+                  <div
+                    class="num"
+                    data-target="5"
+                    data-suffix="+"
+                  >
+                    5+
+                  </div>
+
+                  <div class="label">
+                    Premium accommodations
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <div class="stat-note">
+                Selected figures shown for presentation and subject to final
+                confirmation.
+              </div>
+
+            </div>
+
           </div>
-          <div class="footer-col">
-            <h5>Businesses</h5>
-            <a href="#realestate">Real Estate</a>
-            <a href="#accommodation">Hospitality</a>
-            <a href="#accommodation">Accommodation</a>
-          </div>
-          <div class="footer-col">
-            <h5>Company</h5>
-            <a href="#about">About Us</a>
-            <a href="#projects">Projects</a>
-            <a href="#vision">Vision</a>
-            <a href="#contact">Contact</a>
-          </div>
-          <div class="footer-col">
-            <h5>Connect</h5>
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Facebook</a>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <span>© 2026 Ajen Group. All rights reserved.</span>
-          <span>+91 93379 06763 · info@ajengroup.com</span>
-        </div>
-      </div>
-    </footer>
 
-    <!-- ===================== PROPERTY MODAL ===================== -->
-    <div class="modal-overlay" id="modalOverlay">
-      <div class="modal-card" id="modalCard"></div>
-    </div>
+        </div>
 
-    <script src="script.js"></script>
+      </section>
+
+
+      <!-- ===================== HOSPITALITY COMPONENT ===================== -->
+      <div id="site-hospitality"></div>
+
+
+      <!-- ===================== REAL ESTATE COMPONENT ===================== -->
+      <div id="site-real-estate"></div>
+    </main>
+
+
+    <!-- ===================== CONTACT COMPONENT ===================== -->
+    <div id="site-contact"></div>
+
+
+    <!-- ===================== FOOTER COMPONENT ===================== -->
+    <div id="site-footer"></div>
+
+
+    <!-- ===================== LOAD COMPONENTS ===================== -->
+    <script>
+
+      async function loadComponent(targetId, filePath) {
+
+        const target =
+          document.getElementById(targetId);
+
+        if (!target) return;
+
+        try {
+
+          const response =
+            await fetch(filePath);
+
+          if (!response.ok) {
+            throw new Error(
+              `Could not load ${filePath}`
+            );
+          }
+
+          target.innerHTML =
+            await response.text();
+
+        } catch (error) {
+
+          console.error(error);
+
+        }
+
+      }
+
+
+      async function loadSiteComponents() {
+
+        await Promise.all([
+
+          loadComponent(
+            "site-nav",
+            "components/nav.html"
+          ),
+
+          loadComponent(
+            "site-hospitality",
+            "components/hospitality.html"
+          ),
+
+          loadComponent(
+            "site-real-estate",
+            "components/real-estate.html"
+          ),
+
+          loadComponent(
+            "site-contact",
+            "components/contact.html"
+          ),
+
+          loadComponent(
+            "site-footer",
+            "components/footer.html"
+          )
+
+        ]);
+
+
+        const script =
+          document.createElement("script");
+
+        script.src = "script.js";
+
+
+        script.addEventListener(
+          "load",
+          () => {
+
+            const hospitalityDetailScript =
+              document.createElement("script");
+
+            hospitalityDetailScript.src =
+              "hospitality-detail.js";
+
+            hospitalityDetailScript.addEventListener(
+              "load",
+              () => {
+                const hospitalityScript =
+                  document.createElement("script");
+
+                hospitalityScript.src =
+                  "hospitality.js";
+
+                document.body.appendChild(
+                  hospitalityScript
+                );
+              }
+            );
+
+            document.body.appendChild(hospitalityDetailScript);
+
+
+            const realEstateDetailScript =
+              document.createElement("script");
+
+            realEstateDetailScript.src =
+              "real-estate-detail.js";
+
+            realEstateDetailScript.addEventListener(
+              "load",
+              () => {
+                const realEstateScript =
+                  document.createElement("script");
+
+                realEstateScript.src =
+                  "real-estate.js";
+
+                document.body.appendChild(
+                  realEstateScript
+                );
+              }
+            );
+
+            document.body.appendChild(realEstateDetailScript);
+
+          }
+        );
+
+
+        document.body.appendChild(script);
+
+      }
+
+
+      loadSiteComponents();
+
+    </script>
+
   </body>
 </html>

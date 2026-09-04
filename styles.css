@@ -113,7 +113,7 @@ section {
 .socials a,
 .utility-email {
   color: #4a515a;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 400;
   line-height: 1;
   transition: color 0.2s ease;
@@ -150,188 +150,328 @@ section {
    ========================================================= */
 
 .brand {
+
   display: inline-flex;
+
   align-items: center;
+
   justify-self: start;
+
 }
 
 .brand img {
+
   display: block;
+
   width: auto;
+
   height: 40px;
+
   object-fit: contain;
+
 }
 
 header.main-nav {
+
   position: sticky;
+
   top: 0;
+
   z-index: 200;
+
   background: rgba(251, 252, 253, 0.96);
+
   border-bottom: 1px solid var(--line-light);
+
   backdrop-filter: blur(12px);
+
 }
 
 .main-nav .wrap {
+
   height: 72px;
+
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
 }
 
 .brand {
+
   display: flex;
+
   align-items: baseline;
+
   gap: 8px;
+
   color: var(--navy);
+
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
   font-size: 16px;
+
   font-weight: 700;
+
   letter-spacing: 0.1em;
+
   text-transform: uppercase;
+
 }
 
 .brand .mark {
+
   width: 16px;
+
   height: 16px;
+
   display: inline-block;
+
   background: transparent;
+
   border: 1px solid var(--gold-light);
+
   transform: rotate(45deg);
+
   position: relative;
+
   top: -1px;
+
 }
 
 .brand .mark:after {
+
   content: "";
+
   position: absolute;
+
   inset: 3px;
+
   border: 1px solid var(--gold-light);
+
 }
 
 .brand .wordmark {
+
   font: inherit;
+
   letter-spacing: inherit;
+
 }
 
 .brand .wordmark-sub {
+
   font-size: 9px;
+
   letter-spacing: 0.18em;
+
   color: var(--gold);
+
   font-weight: 600;
+
 }
 
 nav.links {
+
   display: flex;
+
   align-items: center;
+
   gap: 32px;
+
   font-size: 14px;
+
 }
 
 nav.links > a,
+
 .has-drop > button {
+
   position: relative;
+
   padding: 6px 0;
+
   border: 0;
+
   background: none;
+
   color: #425064;
+
   cursor: pointer;
+
   font-size: 14px;
+
   font-weight: 400;
+
   transition: color 0.2s ease;
+
 }
 
 nav.links > a:hover,
+
 .has-drop > button:hover {
+
   color: var(--navy);
+
 }
 
 .has-drop {
+
   position: relative;
+
 }
 
 .has-drop > button {
+
   display: flex;
+
   align-items: center;
+
   gap: 6px;
+
 }
 
 .caret {
+
   width: 7px;
+
   height: 7px;
+
   border-right: 1px solid currentColor;
+
   border-bottom: 1px solid currentColor;
+
   transform: rotate(45deg);
+
   margin-top: -3px;
+
   transition: transform 0.2s ease;
+
 }
 
-.has-drop:hover .caret {
+/* OPEN STATE — CONTROLLED BY CLICK */
+
+.has-drop.open .caret {
+
   transform: rotate(225deg);
+
   margin-top: 3px;
+
 }
 
 .dropdown {
+
   position: absolute;
+
   top: 100%;
+
   left: 50%;
+
   min-width: 200px;
+
   padding: 8px;
+
   background: var(--white);
+
   border: 1px solid var(--line-light);
+
   box-shadow: 0 14px 35px rgba(7, 26, 49, 0.1);
+
   opacity: 0;
+
   visibility: hidden;
+
   transform: translateX(-50%) translateY(4px);
+
   transition:
+
     opacity 0.18s ease,
+
     transform 0.18s ease;
+
 }
 
-.has-drop:hover .dropdown {
+/* OPEN STATE — CONTROLLED BY CLICK */
+
+.has-drop.open .dropdown {
+
   opacity: 1;
+
   visibility: visible;
+
   transform: translateX(-50%) translateY(10px);
+
 }
 
 .dropdown a {
+
   display: block;
+
   padding: 11px 14px;
+
   color: #425064;
+
   font-size: 14px;
+
 }
 
 .dropdown a:hover {
+
   background: var(--snow-2);
+
   color: var(--navy);
+
 }
 
 .nav-cta {
+
   padding: 10px 20px;
+
   border: 1px solid var(--navy);
+
   background: transparent;
+
   color: var(--navy) !important;
+
   font-size: 13px;
+
   font-weight: 500;
+
   transition:
+
     background 0.2s ease,
+
     color 0.2s ease;
+
 }
 
 .nav-cta:hover {
+
   background: var(--navy);
+
   color: var(--white) !important;
+
 }
 
 .burger {
-  display: none;
-  padding: 9px 12px;
-  border: 1px solid var(--line-light);
-  background: transparent;
-  color: var(--navy);
-  cursor: pointer;
-  font-size: 12px;
-}
 
+  display: none;
+
+  padding: 9px 12px;
+
+  border: 1px solid var(--line-light);
+
+  background: transparent;
+
+  color: var(--navy);
+
+  cursor: pointer;
+
+  font-size: 12px;
+
+}
 /* =========================================================
    HERO
    ========================================================= */
@@ -2962,4 +3102,297 @@ footer {
   .utility-email {
     display: none;
   }
+}
+
+/* =========================================================
+   REUSABLE DETAIL PAGES
+   ========================================================= */
+
+.hospitality-detail-hero,
+.real-estate-detail-hero {
+  margin-top: 32px;
+  overflow: hidden;
+}
+
+.hospitality-detail-hero img,
+.real-estate-detail-hero img {
+  display: block;
+  width: 100%;
+  height: min(58vw, 680px);
+  object-fit: cover;
+}
+
+.hospitality-detail-grid,
+.real-estate-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+  gap: 56px;
+  padding-top: 48px;
+}
+
+.hospitality-detail-grid h1,
+.real-estate-detail-grid h1 {
+  margin: 12px 0;
+}
+
+.hospitality-detail-facts {
+  border-top: 1px solid var(--line-dark);
+}
+
+.hospitality-detail-facts .fact-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.real-estate-detail-facts {
+  margin-top: 48px;
+  border-top: 1px solid var(--line);
+}
+
+.real-estate-detail-facts .fact-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.hospitality-detail-gallery,
+.real-estate-detail-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 48px;
+}
+
+.hospitality-detail-gallery[hidden],
+.hospitality-detail-videos[hidden],
+.real-estate-detail-facts[hidden],
+.real-estate-detail-facts .fact-row[hidden],
+.real-estate-detail-gallery[hidden],
+.real-estate-detail-videos[hidden] {
+  display: none;
+}
+
+.hospitality-detail-gallery img,
+.real-estate-detail-gallery img,
+.hospitality-detail-videos video,
+.real-estate-detail-videos video {
+  width: 100%;
+  display: block;
+}
+
+.real-estate-detail-section .eyebrow,
+.real-estate-detail-section .know-more {
+  color: var(--gold);
+}
+
+.real-estate-detail-hero {
+  border: 1px solid var(--line);
+}
+
+@media (max-width: 760px) {
+  .hospitality-detail-grid,
+  .real-estate-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-top: 32px;
+  }
+
+  .hospitality-detail-gallery,
+  .real-estate-detail-gallery {
+    grid-template-columns: 1fr;
+    margin-top: 32px;
+  }
+}
+
+/* ===================== BOOK YOUR STAY ===================== */
+
+.hospitality-detail-booking {
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.booking-label {
+  margin-bottom: 18px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.booking-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.booking-actions .btn-solid,
+.booking-actions .btn-line {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .booking-actions {
+    flex-direction: column;
+  }
+
+  .booking-actions .btn-solid,
+  .booking-actions .btn-line {
+    width: 100%;
+  }
+}
+
+
+
+.facts-label {
+  padding: 18px 0 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+/* =========================================================
+   HOSPITALITY DETAIL — FINAL REFINEMENT
+   ========================================================= */
+
+.hospitality-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+  gap: 56px;
+  padding-top: 48px;
+}
+
+
+/* PREMIUM ACCOMMODATION */
+
+.hospitality-detail-grid .eyebrow {
+  color: var(--gold-light);
+}
+
+
+/* DESCRIPTION */
+
+.hospitality-detail-grid .lede {
+  color: var(--navy-text-dim);
+}
+
+
+/* AMENITIES */
+
+.hospitality-detail-grid .amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  margin-top: 24px;
+}
+
+.hospitality-detail-grid .amenities span {
+  padding: 0;
+  border: none;
+  color: var(--gold-light);
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   BOOK YOUR STAY
+   ========================================================= */
+
+.hospitality-detail-booking {
+  margin-top: 42px;
+  padding-top: 26px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.booking-label {
+  margin-bottom: 18px;
+  color: var(--navy-text);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.booking-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Airbnb */
+
+.booking-actions .btn-solid {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 20px;
+  border: 1px solid var(--gold-light);
+  background: var(--gold-light);
+  color: var(--navy);
+  text-decoration: none;
+}
+
+/* Instagram */
+
+.booking-actions .btn-line {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 20px;
+  border: 1px solid var(--gold-light);
+  color: var(--gold-light);
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   PROPERTY FACTS
+   ========================================================= */
+
+.hospitality-detail-facts {
+  border-top: 1px solid var(--line-dark);
+}
+
+.hospitality-detail-facts .fact-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line-dark);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+
+  .hospitality-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-top: 32px;
+  }
+
+  .booking-actions {
+    flex-direction: column;
+  }
+
+  .booking-actions .btn-solid,
+  .booking-actions .btn-line {
+    width: 100%;
+  }
+
+}
+
+.hospitality-detail-facts .fact-row span:last-child {
+  color: var(--gold-light);
 }

@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ajen Group - Hospitality</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+</head>
+
+
+<body>
+
+  <!-- ===================== NAV COMPONENT ===================== -->
+  <div id="site-nav"></div>
+
+
+  <main>
+
+    <!-- ===================== HOSPITALITY COMPONENT ===================== -->
+    <div id="site-hospitality"></div>
+
+  </main>
+
+
+  <!-- ===================== CONTACT COMPONENT ===================== -->
+  <div id="site-contact"></div>
+
+
+  <!-- ===================== FOOTER COMPONENT ===================== -->
+  <div id="site-footer"></div>
+
+
+  <!-- ===================== LOAD COMPONENTS ===================== -->
+
+  <script>
+
+    async function loadComponent(targetId, filePath) {
+
+      const target =
+        document.getElementById(targetId);
+
+      if (!target) return;
+
+
+      try {
+
+        const response =
+          await fetch(filePath);
+
+
+        if (!response.ok) {
+
+          throw new Error(
+            `Could not load ${filePath}`
+          );
+
+        }
+
+
+        target.innerHTML =
+          await response.text();
+
+
+      } catch (error) {
+
+        console.error(error);
+
+      }
+
+    }
+
+
+    async function loadHospitalityPage() {
+
+      /*
+       * Load all reusable HTML components first.
+       */
+
+      await Promise.all([
+
+        loadComponent(
+          "site-nav",
+          "components/nav.html"
+        ),
+
+        loadComponent(
+          "site-hospitality",
+          "components/hospitality.html"
+        ),
+
+        loadComponent(
+          "site-contact",
+          "components/contact.html"
+        ),
+
+        loadComponent(
+          "site-footer",
+          "components/footer.html"
+        )
+
+      ]);
+
+
+      /*
+       * Load shared website behaviour AFTER
+       * Nav + Contact + Footer exist in the DOM.
+       */
+
+      const sharedScript =
+        document.createElement("script");
+
+      sharedScript.src =
+        "script.js";
+
+
+      sharedScript.addEventListener(
+        "load",
+        () => {
+
+          /*
+           * Load Hospitality data/rendering AFTER
+           * components/hospitality.html exists.
+           */
+
+          const hospitalityDetailScript =
+            document.createElement("script");
+
+          hospitalityDetailScript.src =
+            "hospitality-detail.js";
+
+          hospitalityDetailScript.addEventListener(
+            "load",
+            () => {
+              const hospitalityScript =
+                document.createElement("script");
+
+              hospitalityScript.src =
+                "hospitality.js";
+
+              document.body.appendChild(
+                hospitalityScript
+              );
+            }
+          );
+
+          document.body.appendChild(hospitalityDetailScript);
+
+        }
+      );
+
+
+      document.body.appendChild(
+        sharedScript
+      );
+
+    }
+
+
+    loadHospitalityPage();
+
+  </script>
+
+</body>
+
+</html>
